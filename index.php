@@ -1,7 +1,6 @@
 <?php
 
 require_once 'config.php';
-
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -13,7 +12,6 @@ try {
 } catch (\PDOException $e) {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
-
 $stmt = $pdo->query('SELECT * FROM books');
 while ($row = $stmt->fetch())
 {
