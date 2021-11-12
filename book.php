@@ -23,6 +23,5 @@ $book = $stmt->fetch();
 <h2><?=$book['first_name']?><?=$book["last_name"]?></h2>
 <a href="edit.php?id=<?=$bookId?>">MUUDA</a>
 <a href="delete.php?id=<?=$bookId?>">KUSTUTA</a>
-<a href="add.php">LISA</a>
 </body>
 </html>
